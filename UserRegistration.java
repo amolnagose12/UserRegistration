@@ -5,22 +5,22 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     
-    public static void lastName(){
+    public static void mobileNumber(){
 
-            String lastName="Nag";
+            String mobileNo="91 8806564783";
 
-            String pattern= "^[A-Z]{1}[a-z]{2}";
+            String pattern= "^[0-9]{2}\s[0-9]{10}$";
             Pattern r= Pattern.compile(pattern);
 
-            Matcher m = r.matcher(lastName);
+            Matcher m = r.matcher(mobileNo);
 
 
             if(m.matches()){
-                System.out.println(" Last Name Matched Pattern:" );
+                System.out.println(" mobile number Matched Pattern:" );
 
             }else
             {
-                System.out.println("Last Name  No Matched :");
+                System.out.println("mobile number Not Matched :");
             }
 
         }
@@ -29,7 +29,7 @@ public class UserRegistration {
     public static void main(String[] args){
         System.out.println(" java Regex :");
 
-        lastName();
+        mobileNumber();
 
     }
 }
